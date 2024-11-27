@@ -11,13 +11,15 @@ app.use(cors({
     origin: process.env.CLIENT_URL,
     credentials: true
 }));
+
+
 app.use(express.json());
 app.use(cookieParser());
 
 // Requests{
-// app.use("/api/test", (req, res) => {
-//     res.send("It works!")
-// })
+app.use("/api/test", (req, res) => {
+    res.send("It works!")
+})
 
 // app.use("/api/auth/register", (req, res) => {
 //     res.send("It works!")
